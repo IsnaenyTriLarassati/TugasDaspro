@@ -8,8 +8,8 @@ public class Kabisat15 {
         System.out.println("Masukkan Tahun :");
         tahun = sc.nextInt();
 
-        if (( tahun % 4) == 0 && (tahun % 100) != 0 || ( tahun % 4) == 0 && (tahun % 100) != 0){
-            System.out.println("Tahun kabisat");
+        if (( tahun % 4) == 0 && (tahun % 100) != 0 || ( tahun % 4) == 0 ){
+            System.out.println("Tahun abisat");
         } else {
             System.out.println("Bukan tahun kabisat");
         }
