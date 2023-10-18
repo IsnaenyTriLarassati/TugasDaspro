@@ -13,7 +13,7 @@ public static void main(String[] args) {
         System.out.println("Apakah Anda ingin mengambil cuti (y/t)?");
         konfirmasi = sc.next();
 
-        if (konfirmasi.equalsIgnoreCase("y"));
+        if (konfirmasi.equalsIgnoreCase("y")) {
             System.out.println("Jumlah hari: ");
             jumlahHari = sc.nextInt();
 
@@ -22,10 +22,12 @@ public static void main(String[] args) {
                 System.out.println("Sisa jatah cuti: " + jatahCuti); 
             } else {
                 System.out.println("Sisa jatah cuti Anda tidak mencukupi");
-                break;
             }
-        
-    } while (jatahCuti > 0);
+        }
+        System.out.print("Apakah Anda ingin melanjutkan (y/t)? "); 
+        konfirmasi = sc.next();
+    } while (konfirmasi.equalsIgnoreCase("y") && jatahCuti > 0);
+    System.out.println("Terimakasih, program berakhir");
 
 }
     
