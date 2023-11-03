@@ -5,7 +5,7 @@ public class LinearSearch15 {
     public static void main(String[] args) {
         Scanner sc = new Scanner (System.in);
         
-        int[] arrayInt = new int [6];
+        int[] arrayInt = {34, 18, 26, 48, 72, 20, 56, 63};
         int key, jumlahElemen;
         int hasil = -1;
 
@@ -23,7 +23,8 @@ public class LinearSearch15 {
             for (int i = 0; i < arrayInt.length; i++) {
                 if (arrayInt[i] == key) {
                     hasil = i;
-                    break;
+                    System.out.println("Key ada dalam array pada indeks ke- " + i);
+                    i++;
                 }
             }
             if (hasil == -1) {
