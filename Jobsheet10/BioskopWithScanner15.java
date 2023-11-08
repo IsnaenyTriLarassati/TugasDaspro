@@ -14,7 +14,7 @@ public class BioskopWithScanner15 {
             System.out.println("Menu 1: Input data penonton");
             System.out.println("Menu 2: Tampilan daftar penonton");
             System.out.println("Menu 3: Exit");
-            System.out.println("Pilih menu (1/2/3): ");
+            System.out.print("Pilih menu (1/2/3): ");
             int pilihanMenu = sc.nextInt();
 
             switch (pilihanMenu) {
@@ -27,10 +27,11 @@ public class BioskopWithScanner15 {
                     kolom = sc.nextInt();
                     sc.nextLine();
 
-                    if (baris >= 1 && baris <= penonton.length && kolom >= 1 && kolom <= penonton[0].length) {
+                    if (penonton[baris - 1][kolom - 1] == null) {
                         penonton[baris - 1][kolom - 1] = nama;
+                        System.out.println("Data penonton berhasil disimpan");
                     } else {
-                        System.out.println("Input tidak valid");
+                        System.out.println("Kursi sudah terisi oleh penonton lain. Silahkan pilih kursi lain");
                     }
                     break;
                 case 2:
